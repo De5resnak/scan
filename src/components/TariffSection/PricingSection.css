@@ -1,0 +1,197 @@
+.pricing-container {
+  position: relative;
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pricing-title {
+  font-family: 'Ferry', sans-serif;
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 54px;
+  letter-spacing: 0.01em;
+  color: #000000;
+  text-align: left; /* Прижимаем текст к левому краю */
+  margin-bottom: 40px;
+}
+.price-cards{
+  position: relative;
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+}
+.card {
+  box-sizing: border-box;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px 10px 0 0;
+  margin: 20px;
+  max-width: 510px;
+  flex: 1;
+  min-width: 300px; /* Устанавливаем минимальную ширину для карточек */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 600px;
+  align-content: flex-start;
+  flex-direction: column;
+}
+
+.tarrif-text{
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+.feature-box{
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-left: 10px;
+
+}
+
+.card-price{
+  font-size: 25px;
+}
+
+.card-description{
+  padding: 10px;
+}
+
+.card-discounted-price{
+  text-decoration: line-through;
+  color: grey;
+  padding-left: 30px;
+}
+
+.card-header {
+  background: #FFB64F;
+  border-radius: 10px 10px 0 0;
+  height: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%; /* Обеспечивает использование всей ширины */
+}
+
+.card-image {
+  width: 70px; /* Размер иконки, можно изменить по необходимости */
+  height: 70px;
+}
+
+.card-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 24px; /* Уменьшен размер для адаптации внутри card-header */
+  color: #000000;
+  margin: 0;
+}
+
+.card-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px; /* Уменьшен размер для адаптации внутри card-header */
+  color: #000000;
+  margin: 0;
+}
+
+.details-button {
+  width: 95%;
+  height: 55px;
+  background-color: #5970FF; /* Цвет кнопки */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1; /* Заставляет контейнер текста занимать оставшееся пространство */
+}
+
+.details-button:hover {
+  background-color: #495BCC; /* Немного затемненный цвет при наведении */
+}
+
+.feature{
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.check-icon{
+  width: 25px;
+  height: 25px;
+}
+
+.price-section{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+/* Остальные стили остаются прежними */
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .pricing-container {
+    padding: 20px;
+    flex-direction: column; /* На мобильных устройствах карточки будут в столбик */
+    align-items: center;
+    width: 85%;
+  }
+
+  .pricing-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .card {
+    margin: 20px 0;
+    max-width: 100%;
+  }
+
+  .pricing-button {
+    width: 100%;
+    max-width: 300px;
+  }
+  .details-button {
+    max-width: 300px;
+  }
+
+  .price-cards{
+    width: 90%;
+  }
+
+  .feature-box{
+    padding-top: 10px;
+  }
+}
+

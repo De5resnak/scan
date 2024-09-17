@@ -1,0 +1,103 @@
+/* components/Footer.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Футер */
+.footer {
+    position: relative;
+    width: 100%;
+    height: 137px; /* Измените высоту, если нужно сделать её динамической */
+    background: #029491;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    box-sizing: border-box;
+    bottom: 0;
+
+}
+
+/* Логотип */
+.footer__logo {
+    width: 141px;
+    height: 141px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Контактная информация */
+.footer__contact {
+    text-align: right;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    white-space: nowrap;
+}
+
+.footer__contact p {
+    margin: 5px 0; /* Отступы между строками */
+}
+
+/* Copyright */
+.footer__copyright {
+    text-align: right;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .footer {
+        height: auto; /* Даем футеру адаптивную высоту */
+        padding: 10px 20px;
+        flex-wrap: wrap; /* Используем wrap для компактности */
+    }
+
+    .footer__logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer__contact {
+        width: auto; /* Даем контактной информации авто ширину */
+        font-size: 13px; /* Уменьшаем размер шрифта */
+        line-height: 16px;
+        text-align: right;
+        margin-left: auto; /* Отодвигаем текст вправо */
+    }
+
+    .footer__copyright {
+        font-size: 11px; /* Уменьшаем размер шрифта */
+        line-height: 13px;
+        text-align: right;
+        margin-left: auto; /* Отодвигаем текст вправо */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__logo {
+        width: 80px; /* Уменьшаем логотип на маленьких экранах */
+        height: 80px;
+    }
+
+    .footer__contact,
+    .footer__copyright {
+        font-size: 11px; /* Ещё меньше размер текста на мобильных */
+        line-height: 13px;
+        text-align: right;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}

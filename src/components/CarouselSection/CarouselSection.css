@@ -1,0 +1,158 @@
+/* Основной контейнер для карусели */
+.carousel-section {
+    width: 100%;
+    max-width: 1346px; /* Максимальная ширина карусели на десктопе */
+    margin: 0 auto;
+    padding: 50px 0;
+    box-sizing: border-box;
+    position: relative; /* Для позиционирования стрелок */
+    overflow: hidden; /* Для предотвращения выхода элементов за пределы */
+}
+
+.carousel-section__title {
+    font-family: 'Ferry', sans-serif;
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 54px;
+    text-align: left;
+    margin-left: 20px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.slick-slider {
+    position: relative;
+    padding: 0 50px; /* Отступы для стрелок */
+    box-sizing: border-box;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center; /* Центрирует содержимое слайда */
+}
+
+.slick-slide > div {
+    display: flex;
+    justify-content: center; /* Центрирует карточку внутри слайда */
+    padding: 0 5px; /* Увеличьте значение для большего расстояния между карточками */
+    box-sizing: border-box;
+}
+
+.carousel-card {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    height: 225px; /* Фиксированная высота для карточек */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0 15px; /* Увеличьте значение для большего расстояния между карточками */
+    width: 80%; /* Добавлено: уменьшить ширину карточек */
+}
+
+.carousel-card__icon-container {
+    margin-bottom: 10px;
+}
+
+.carousel-card__icon {
+    width: 64px;
+    height: 64px;
+}
+
+.carousel-card__text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.arrow-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Распределяет стрелки по краям контейнера */
+    transform: translateY(-50%); /* Центрирует стрелки по вертикали */
+    padding: 0 10px; /* Отступы от краёв */
+    box-sizing: border-box;
+}
+
+.slick-prev, .slick-next {
+    width: 50px !important; /* Увеличенная ширина стрелок */
+    height: 50px !important; /* Увеличенная высота стрелок */
+    background-color: #FFFFFF; /* Цвет фона стрелок */
+    border-radius: 50%; /* Круглые стрелки */
+    opacity: 0.5; /* Уменьшенная прозрачность стрелок */
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Убедиться, что стрелки позиционируются абсолютно */
+}
+
+.slick-prev:hover, .slick-next:hover {
+    opacity: 0.7; /* Увеличение прозрачности при наведении */
+}
+
+.slick-prev {
+    left: 15px; /* Отодвинуть стрелку "Назад" внутрь от края */
+    background-image: url('../../assets/icons/leftarrow.png');
+    background-size: 20px 20px; /* Размер иконки стрелки */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slick-next {
+    right: 15px; /* Отодвинуть стрелку "Вперед" внутрь от края */
+    background-image: url('../../assets/icons/rightarrow.png');
+    background-size: 20px 20px; /* Размер иконки стрелки */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slick-dots {
+    display: none !important; /* Скрыть точки */
+}
+
+@media (max-width: 768px) {
+    .carousel-section {
+        padding: 20px 0; /* Уменьшить отступы на мобильных */
+        max-width: 100%; /* Использовать всю ширину экрана на мобильных */
+    }
+
+    .carousel-section__title {
+        font-size: 28px;
+        line-height: 34px;
+        margin-left: 10px;
+    }
+
+    .slick-slider {
+        padding: 0 20px; /* Добавить внутренние отступы для учета стрелок */
+        position: relative; /* Чтобы позиционирование стрелок работало корректно */
+    }
+
+    .carousel-card {
+        width: 50%; /* Карточки занимают почти всю ширину */
+        margin: 0 auto;
+        height: 200px; /* Автоматическая высота для карточек на мобильных */
+    }
+
+    .slick-prev, .slick-next {
+        width: 40px !important; /* Уменьшить размер стрелок на мобильных */
+        height: 40px !important;
+        z-index: 2;
+    }
+
+    .slick-prev {
+        left: 5px; /* Смещение стрелки "Назад" внутрь от края */
+    }
+
+    .slick-next {
+        right: 5px; /* Смещение стрелки "Вперед" внутрь от края */
+    }
+}

@@ -1,0 +1,148 @@
+/* components/Section1.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+    font-family: 'Ferry';
+    src: url('../../assets/fonts/Ferry-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+.section1 {
+    position: relative;
+    width: 100%;
+    max-width: 1320px;
+    margin: 117px auto; /* Центрируем блок */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Уменьшаем отступы для адаптивности */
+    box-sizing: border-box;
+    height: auto; /* Сделаем высоту авто для адаптивности */
+    overflow: hidden; /* Добавлено для предотвращения переполнения содержимого */
+}
+
+.section1__content {
+    width: 100%;
+    max-width: 629px; /* Максимальная ширина для больших экранов */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 20px; /* Добавим внутренние отступы для лучшего отображения на малых экранах */
+}
+
+.section1__title {
+    font-family: 'Ferry', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin: 0 0 30px 0;
+    box-sizing: border-box;
+    word-wrap: break-word; /* Разрывает слова, чтобы они не выходили за пределы */
+    overflow-wrap: break-word; /* Обеспечивает перенос длинных слов */
+}
+
+.section1__description {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin: 0 0 50px 0;
+    width: 100%; /* Занимает всю ширину родителя */
+    max-width: 534px; /* Максимальная ширина для больших экранов */
+    box-sizing: border-box;
+    word-wrap: break-word; /* Разрывает слова, чтобы они не выходили за пределы */
+    overflow-wrap: break-word; /* Обеспечивает перенос длинных слов */
+}
+
+.section1__button-container {
+    width: 100%;
+    max-width: 335px;
+    height: 59px;
+}
+
+.section1__button {
+    width: 100%;
+    height: 100%;
+    background: #5970FF;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #FFFFFF;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    height: 50px;
+}
+
+.section1__image-container {
+    width: 100%;
+    max-width: 629px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 20px; /* Добавим внутренние отступы для лучшего отображения на малых экранах */
+}
+
+.section1__image {
+    width: 100%;
+    height: auto;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .section1 {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        margin-top: 70px;
+    }
+
+    .section1__content, .section1__image-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .section1__title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .section1__description {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .section1__button-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section1__title {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .section1__description {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .section1__button {
+        font-size: 18px;
+    }
+}

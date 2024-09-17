@@ -1,0 +1,192 @@
+.ResultsPage {
+    margin-top: 120px;
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: space-around;
+    max-width: 1320px;
+}
+
+.ResultsPage-article {
+    width: 500px;
+}
+
+.ResultsPage-article-main {
+    font-family: 'Ferry', sans-serif;
+    font-size: 40px;
+}
+
+.ResultsPage-image {
+    height: 300px;
+    width: auto;
+}
+
+.ResultsPage-image-container{
+    margin-left: auto;
+}
+
+.ResultsPage-breaf-container{
+    width: 100%;
+}
+
+
+.ResultsPage-breaf {
+    width: 100%;
+    background: #7CE3E1;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.ResultsPage-breaf-slider {
+    width: 1250px;
+
+}
+
+.ResultsPage-breaf-slider-container {
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #7CE3E1;
+}
+
+.ResultsPage-documents-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+}
+
+.ResultsPage-documents-card {
+    width: 600px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ResultsPage-documents-article-container {
+    width: 100%;
+    text-align: left;
+    font-family: 'Ferry', sans-serif;
+    margin-top: 40px;
+}
+
+.ResultsPage-ShowMore-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.ResultsPage-ShowMore-button {
+    width: 300px;
+    height: 60px;
+    border-radius: 5px;
+    border-width: 0px;
+    background-color: #5970FF;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.ResultsPage-documents-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.ResultsPage-documents-card-head {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    color: #949494;
+}
+
+.ResultsPage-documents-card-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+
+
+.ResultsPage-documents-card-type {
+    height: 20px;
+    width: auto;
+    background-color: #FFB64F;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+
+}
+
+.ResultsPage-documents-card-image-container {
+    width: 100%;
+}
+
+.ResultsPage-documents-card-image {
+    width: 100%;
+    height: auto;
+}
+
+.ResultsPage-documents-card-text {
+    font-size: 16px;
+    color: #949494;
+}
+
+.ResultsPage-documents-card-source {
+    text-decoration: underline;
+}
+
+.ResultsPage-documents-card-button {
+    background-color: #7CE3E1;
+    font-size: 16px;
+    width: 220px;
+    height: 45px;
+    border-radius: 5px;
+    border-width: 0px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+.ResultsPage-ShowMore-button:hover {
+    background-color: #495BCC;
+}
+
+.ResultsPage-breaf-slide {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .ResultsPage {
+        width: 100%;
+    }
+
+    .ResultsPage-breaf-container {
+        max-width: 100%;
+    }
+
+    .ResultsPage-breaf-slider-container {
+        max-width: 80%;
+    }
+
+    .ResultsPage-breaf-slider {
+        max-width: 100%;
+    }
+
+    .ResultsPage-image {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,190 @@
+.SearchPage {
+    display: flex;
+    flex-direction: row;
+    margin-top: 130px;
+    font-family: "Inter", sans-serif;
+    margin-left: 70px;
+    margin-bottom: 30px;
+}
+
+.SearchPage-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.SearchPage-article-main {
+    font-family: 'Ferry', sans-serif;
+    font-size: 35px;
+    text-align: justify;
+}
+
+.SearchPage-article-sub {
+    font-size: 19px;
+}
+
+.SearchPage-form-container {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    height: 550px;
+    width: 800px;
+}
+
+.SearchPage-form-error {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: red;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.SearchPage-form {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+.SearchPage-form-select {
+    height: 40px;
+    width: 230px;
+}
+
+.SearchPage-form-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 45%;
+}
+
+.SearchPage-form-input {
+    height: 40px;
+    width: 230px;
+    text-align: center;
+
+}
+
+.SearchPage-form-input-date {
+    height: 40px;
+    width: 170px;
+}
+
+.SearchPage-form-article {
+    padding-top: 5px;
+}
+
+.SearchPage-form-article-mark {
+    color: gray;
+    font-size: 14px;
+}
+
+.SearchPage-form-range-section{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.SearchPage-form-checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 45%;
+}
+
+.SearchPage-form-button {
+    width: 300px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #5970FF;
+    border-width: 0px;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.SearchPage-form-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.SearchPage-image-container {
+    margin-left: 200px;
+}
+
+#SearchPage-image1 {
+    height: 100px;
+    width: 100px;
+    margin-right: 300px;
+}
+
+#SearchPage-image2 {
+    height: 100px;
+    width: 200px;
+}
+
+#SearchPage-image3 {
+    height: 600px;
+    width: 600px;
+}
+
+.SearchPage-form-button-disabled {
+    background-color: #b0b3ff; /* Светлый цвет для неактивной кнопки */
+    cursor: not-allowed; /* Курсор в виде запрещающего символа */
+}
+
+@media (max-width: 768px) {
+    .SearchPage {
+        flex-direction: column;
+        margin-top: 70px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .SearchPage-form-checkbox-container{
+        display: none;
+    }
+
+    .SearchPage-form-container {
+        width: 100%;
+    }
+
+    .SearchPage-form-input{
+        width: 98%;
+    }
+
+    .SearchPage-form-main{
+        width: 100%;
+    }
+
+    #SearchPage-image1{
+        display: none;
+    }
+
+    #SearchPage-image2 {
+        display: none;
+    }
+
+    #SearchPage-image3 {
+        height: auto;
+        width: 100%;
+    }
+
+    .SearchPage-image-container{
+        margin-left: 0px;
+    }
+
+    .SearchPage-form-select {
+        width: 100%;
+    }
+
+    .SearchPage-form-button-container {
+        align-content: center;
+    }
+}

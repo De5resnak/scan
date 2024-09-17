@@ -1,0 +1,136 @@
+.login-page {
+    display: flex;
+    margin-top: 140px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1320px;
+}
+
+.login-page-content {
+    width: 60%;
+    margin-bottom: 50px;
+}
+
+.login-page-image{
+    height: 500px;
+    width: 500px;
+}
+
+.login-page-article {
+    font-family: 'Ferry', sans-serif;
+    font-size: 40px;
+    margin-top: 0px;
+}
+
+.login-page-form-container {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    width: 420px;
+
+}
+
+.login-page-form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    font-family: 'Inter', sans-serif;
+    gap: 20px;
+}
+
+.login-page-form-type-change {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.login-page-form-line{
+    height: 2px;
+    width: 100%;
+}
+
+.login-page-form-login {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.login-page-form-register {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.login-page-form-label{
+    color: #949494;
+
+}
+
+.login-page-form-input {
+    border-radius: 5px;
+    border-color: #949494;
+    width: 98%;
+    height: 50px;
+    border-width: 2px;
+}
+
+.login-page-form-button {
+    height: 60px;
+    background: #5970FF;
+    color: #FFFFFF;
+    width: 100%;
+    border-radius: 5px;
+    border-width: 0px;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+}
+
+.login-page-form-link {
+    margin: auto;
+}
+
+.login-page-form-media-button {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    height: 30px;
+    width: 90px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: black;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.login-page-form-media-buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.login-page-form-media-button-image {
+    height: 17px;
+    width: 55px;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .login-page {
+        flex-direction: column-reverse;
+    }
+    .login-page-form-container {
+        width: 90%;
+    }
+
+    .login-page-image {
+        height: 335px;
+        width: 356px;
+    }
+    .login-page-article {
+        font-size: 25px;
+    }
+}

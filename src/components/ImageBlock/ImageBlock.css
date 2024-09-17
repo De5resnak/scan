@@ -1,0 +1,28 @@
+.image-block {
+    position: relative;
+    width: 100%;
+    max-width: 1346px; /* Максимальная ширина блока на десктопе */
+    margin: 0 auto;
+    overflow: hidden; /* Чтобы изображения не выходили за пределы блока */
+}
+
+.image-block__img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-block__img--mobile {
+    display: none; /* Скрыть изображение для мобильной версии по умолчанию */
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    .image-block__img--desktop {
+        display: none; /* Скрыть изображение для десктопа на мобильных */
+    }
+
+    .image-block__img--mobile {
+        display: block; /* Показать изображение для мобильных устройств */
+    }
+}

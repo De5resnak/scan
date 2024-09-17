@@ -1,0 +1,304 @@
+/* Основные стили для шапки */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0; /* Выравниваем шапку по левой границе */
+    z-index: 1000; /* Устанавливаем высокий z-index, чтобы шапка была поверх другого контента */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем небольшую тень, чтобы шапка визуально отделялась от контента */
+}
+
+/* Логотип */
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__divider {
+    width: 2px;
+    height: 26px;
+    background: #029491;
+    opacity: 0.6;
+    margin: 0 10px; /* Добавим отступы слева и справа для отделения от кнопок */
+}
+
+.header__logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Контейнер для навигации и кнопок на десктопе */
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+/* Обертка для навигации */
+.header__nav {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;
+    /* По умолчанию скрываем навигацию на мобильных устройствах */
+}
+
+.header__account_info_loader {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header__nav_links {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__account_info_container {
+    background-color: #D9D9D9;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14px;
+    font-family: Inter;
+}
+
+.header__account_info_usedCompany_container {
+    display: flex;
+    gap: 10px;
+    line-height: 0.5;
+    align-items: center;
+}
+
+.header__account_info_limitnumber {
+    color: #8AC540;
+    font-size: 16px;
+}
+
+.header__account_info_usednumber {
+    font-size: 16px;
+}
+
+/* Стили ссылок навигации */
+.header__link {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header__link:hover {
+    color: #029491;
+}
+
+/* Обертка для кнопок */
+.header__account {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Кнопка зарегистрироваться */
+.header__register {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+/* Кнопка войти */
+.header__login {
+    background-color: #7CE3E1;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header__login:hover {
+    background-color: #029491;
+}
+
+/* Гамбургер-меню */
+.header__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Гамбургер-меню линии */
+.header__hamburger-line {
+    width: 30px;
+    height: 5px;
+    background: #029491;
+    border-radius: 5px;
+}
+
+
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+
+    .header__divider {
+        display: none;
+    }
+    .header__nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #029491;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 30px 0;
+        z-index: 1000;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    }
+
+    .header__nav--open {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .header__nav_links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header__link,
+    .header__register,
+    .header__login {
+        font-size: 18px;
+        color: #FFFFFF;
+        text-align: center;
+        width: 100%;
+    }
+
+    .header__account {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Центрируем кнопки */
+        gap: 10px; /* Расстояние между кнопками */
+        width: 100%; /* Контейнер занимает всю ширину экрана */
+        margin-top: 20px; /* Отступ сверху для разделения от остальных элементов */
+    }
+
+    .header__register {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #FFFFFF;
+        opacity: 0.6;
+    }
+
+    .header__login {
+        background-color: #7CE3E1;
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        padding: 15px 30px;
+        margin-top: 10px;
+        font-size: 20px;
+        width: 320px;
+    }
+
+    .header__hamburger {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+}
+
+.header__company-info {
+    margin-right: 20px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.loader {
+    font-size: 16px;
+    color: #029491;
+}
+
+/* Блок с аватаром и именем пользователя */
+.header__user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 16px;
+    color: #000000;
+}
+
+.header__logout {
+    background-color: #ff5e57;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header__logout:hover {
+    background-color: #e04844;
+}
+
+@media (max-width: 480px) {
+    .header__link,
+    .header__register,
+    .header__login {
+        font-size: 16px;
+    }
+
+    .header__logo img {
+        max-width: 80px;
+    }
+}
