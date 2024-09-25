@@ -143,6 +143,8 @@
 .ResultsPage-documents-card-text {
     font-size: 16px;
     color: #949494;
+    max-width: 100%;
+    word-break: break-word;
 }
 
 .ResultsPage-documents-card-source {
@@ -158,6 +160,9 @@
     border-width: 0px;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ResultsPage-ShowMore-button:hover {

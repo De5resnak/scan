@@ -190,23 +190,41 @@ const SearchPage = () => {
     };
 
     try {
-        const response = await fetch('https://gateway.scan-interfax.ru/api/v1/objectsearch/histograms', {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${authData.accessToken}`, // Исправлено
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(requestBody),
-        });
+        // Отправляем два запроса параллельно
+        const [histogramsResponse, objectsearchResponse] = await Promise.all([
+            fetch('https://gateway.scan-interfax.ru/api/v1/objectsearch/histograms', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${authData.accessToken}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestBody),
+            }),
+            fetch('https://gateway.scan-interfax.ru/api/v1/objectsearch', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${authData.accessToken}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestBody),
+            }),
+        ]);
 
-        if (!response.ok) {
-            throw new Error('Ошибка при выполнении поиска');
+        // Проверяем оба ответа на ошибки
+        if (!histogramsResponse.ok) {
+            throw new Error('Ошибка при запросе гистограммы');
+        }
+        if (!objectsearchResponse.ok) {
+            throw new Error('Ошибка при поиске документов');
         }
 
-        const result = await response.json();
+        // Парсим результаты
+        const histogramsData = await histogramsResponse.json();
+        const objectsearchData = await objectsearchResponse.json();
 
-        // Перенаправляем на страницу с результатами
-        navigate('/results', { state: { result } });
+        // Передаем оба результата на страницу результатов
+        console.log('Navigating to ResultsPage with state:', { histogramsData, objectsearchData });
+        navigate('/results', { state: { histogramsData: histogramsData, documentIds: objectsearchData.items.map(item => item.encodedId) } });
 
     } catch (err) {
         console.error('Ошибка:', err);
